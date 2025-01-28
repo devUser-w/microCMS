@@ -1,5 +1,3 @@
-console.log('NEXT_PUBLIC_SERVICE_DOMAIN:', process.env.NEXT_PUBLIC_SERVICE_DOMAIN);
-
 import { createClient } from 'microcms-js-sdk';
 
 // 環境変数にNEXT_PUBLIC_SERVICE_DOMAINが設定されていない場合はエラーを投げる
@@ -17,9 +15,3 @@ export const client = createClient({
     serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN,
     apiKey: process.env.NEXT_PUBLIC_API_KEY,
 });
-
-
-// export const client = createClient({
-//     // serviceDomain: process.env.NEXT_PUBLIC_SERVICE_DOMAIN,
-//     apiKey: process.env.NEXT_PUBLIC_API_KEY,
-// });
