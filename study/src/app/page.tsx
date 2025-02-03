@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { client } from '@/libs/microcms';
-import { propagateServerField } from 'next/dist/server/lib/render-server';
 
 // ブログ記事の型定義
 type Props = {
@@ -29,7 +28,7 @@ export default async function Home() {
       <ul>
         {posts.map((post) => (
           <li key={post.id}>
-            <Link href={`/study/${post.id}`}> {/* 記事へのリンク作成 */}
+            <Link href={`/study/${post.id}`}> {/* 記事へのリンクを生成 */}
               {post.title} {/* タイトルを表示 */}
             </Link>
           </li>
